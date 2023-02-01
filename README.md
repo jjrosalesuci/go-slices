@@ -1,5 +1,5 @@
 # go-slices
-Libreria para el menajo de arreglos
+Libreria para el menajo de arreglos con generics
 
 ## Como instalar 
 
@@ -8,7 +8,6 @@ go get github.com/jjrosalesuci/go-slices
 ```
 
 ## Funciones disponibles
-
 ### Filter
 
 ```go
@@ -26,4 +25,22 @@ func main() {
 	})
 	fmt.Println(divisibleBy2)
 }
+```
+
+
+### Reduce
+
+```go
+numbers := []int{1, 2, 3}
+sum := slicesUtil.Reduce(numbers, func(acc, current int) int {
+	return acc + current
+}, 0)
+
+```
+
+### Map
+
+```go
+numbers := []float64{4, 9}
+newNumbers := slicesUtil.Map(numbers, math.Sqrt)
 ```
