@@ -48,10 +48,10 @@ newNumbers := slicesUtil.Map(numbers, math.Sqrt)
 ## Some
 ```go
 numbers := []float64{4, 9, 20}
-expected := true
 
-toFind = 2;
-result := Some(numbers, func(numberCursor int) bool {
-   return numberCursor == toFind
+toFind := 2
+result := Some(numbers, func(numberCursor float64) bool {
+	return numberCursor == float64(toFind)
 })
+
 ```

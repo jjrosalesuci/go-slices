@@ -62,14 +62,12 @@ func TestSome(t *testing.T) {
 	t.Run("OK", func(t *testing.T) {
 		// Given
 
-		numbers := []float64{4, 9, 20}
-		expected := true
-
+		numbers := []float64{2, 9, 20}
 		// Then
 
-		toFind = 2;
-		result := Some(numbers, func(numberCursor int) bool {
-			return numberCursor == toFind
+		toFind := 2
+		result := Some(numbers, func(numberCursor float64) bool {
+			return numberCursor == float64(toFind)
 		})
 
 		// When
