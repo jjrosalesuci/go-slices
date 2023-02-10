@@ -10,6 +10,15 @@ func Filter[T any](slice []T, f func(T) bool) []T {
 	return n
 }
 
+func Some[T any](slice []T, f func(T) bool) bool {
+	for _, elemt := range slice {
+		if f(elemt) {
+			return true
+		}
+	}
+	return false
+}
+
 func Reduce[T, M any](s []T, f func(M, T) M, initValue M) M {
 	acc := initValue
 	for _, v := range s {

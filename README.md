@@ -44,3 +44,14 @@ sum := slicesUtil.Reduce(numbers, func(acc, current int) int {
 numbers := []float64{4, 9}
 newNumbers := slicesUtil.Map(numbers, math.Sqrt)
 ```
+
+## Some
+```go
+numbers := []float64{4, 9, 20}
+expected := true
+
+toFind = 2;
+result := Some(numbers, func(numberCursor int) bool {
+   return numberCursor == toFind
+})
+```

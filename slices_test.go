@@ -57,3 +57,22 @@ func TestMap(t *testing.T) {
 		assert.Equal(t, expected, newNumbers)
 	})
 }
+
+func TestSome(t *testing.T) {
+	t.Run("OK", func(t *testing.T) {
+		// Given
+
+		numbers := []float64{4, 9, 20}
+		expected := true
+
+		// Then
+
+		toFind = 2;
+		result := Some(numbers, func(numberCursor int) bool {
+			return numberCursor == toFind
+		})
+
+		// When
+		assert.Equal(t, true, result)
+	})
+}
