@@ -50,7 +50,7 @@ newNumbers := slicesUtil.Map(numbers, math.Sqrt)
 numbers := []float64{4, 9, 20}
 
 toFind := 2
-result := Some(numbers, func(numberCursor float64) bool {
+result := slicesUtil.Some(numbers, func(numberCursor float64) bool {
 	return numberCursor == float64(toFind)
 })
 
